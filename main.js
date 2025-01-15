@@ -154,6 +154,12 @@ if(!productTypeValue || !productNameValue || !productCountValue){
     alert("Заполинете поля");
 }
 
+if (productCountValue === "0") {
+    alert("Количество не может быть равно нулю!");
+    return;
+  }
+  
+
  const productCards = productList.some((elem)=>elem.productType===productTypeValue)
  if(!productCards){   
  const product = {
